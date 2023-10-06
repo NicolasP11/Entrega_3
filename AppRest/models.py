@@ -4,13 +4,21 @@ from django.db import models
 
 class Comida(models.Model):
     nombre = models.CharField(max_length=30)
-    descripcion = models.CharField(max_length=120)
     precio = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.nombre} - {self.precio}"
 
 class Bebida(models.Model):
     nombre = models.CharField(max_length=30)
     precio = models.IntegerField()
+    
+    def __str__(self):
+        return f"{self.nombre} - {self.precio}"
 
 class Postre(models.Model):
     nombre = models.CharField(max_length=30)
     precio = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.nombre} - {self.precio}"

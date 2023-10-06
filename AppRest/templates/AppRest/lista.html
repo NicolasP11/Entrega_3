@@ -1,0 +1,15 @@
+{% extends "AppRest/padre.html" %}
+
+{% load static %}
+
+{% block title %} Formulario - Mostrar Productos {% endblock title%}
+
+{% block main %}
+<ul>
+    {% for comida in object_list %}
+
+        <li>Nombre: {{ comida.nombre }} / Precio: {{ comida.precio }} </li>
+
+    {% endfor %}
+</ul>
+{% endblock main %}

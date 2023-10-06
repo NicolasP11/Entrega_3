@@ -1,0 +1,16 @@
+{% extends "AppRest/padre.html" %}
+
+{% load static %}
+
+{% block title %} Formulario - Productos Buscados {% endblock title%}
+
+{% block main %}
+
+    {% for comida in comidas %}
+
+        <p>Nombre: {{ comida.nombre }}</p>
+        <p>Precio: {{ comida.precio }}</p>
+
+    {% endfor %}
+
+{% endblock main %}
